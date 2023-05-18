@@ -14,7 +14,7 @@ function rot13(encodedStr){
    let decodedArr = []; // Your Result goes here
   // Only change code below this line
 	for(i in encodedStr){
-		if(encodedStr.charCodeAt(i)<65 && encodedStr.charCodeAt(i)>90){
+		if(encodedStr.charCodeAt(i)<65 || encodedStr.charCodeAt(i)>90){
 			decodedArr.push(encodedStr[i]);
 		}else{
 			const charCode = encodedStr.charCodeAt(i);
