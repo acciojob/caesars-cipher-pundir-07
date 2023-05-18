@@ -14,12 +14,10 @@ function rot13(encodedStr){
    let decodedArr = []; // Your Result goes here
   // Only change code below this line
 	for(i in encodedStr){
-		if(encodedStr.charCodeAt(i)<65 || encodedStr.charCodeAt(i)>90){
+		if(lookup[encodedStr[i]]===undefined){
 			decodedArr.push(encodedStr[i]);
 		}else{
-			const charCode = encodedStr.charCodeAt(i);
-			const dec= String.fromCharCode(charCode-13);
-			decodedArr.push(dec);
+			decodedArr.push(lookup[encodedStr[i]]);
 		}
 	}
 
